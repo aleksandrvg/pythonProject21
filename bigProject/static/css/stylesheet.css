@@ -1,0 +1,27 @@
+.card
+{
+background-color: #f3f3f3;
+border: 1px solid #ddd;
+border-radius: 5px;
+padding: 15px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+margin: 10px;
+width: 300px;
+}
+.cardImg
+{
+border-radius: 8px;
+width: 150px;
+}
+.grid-container
+{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(5,1fr);
+grid-auto-flow: row;
+}
+.cardPictures
+{
+border-radius: 10px;
+width: 600px;
+}

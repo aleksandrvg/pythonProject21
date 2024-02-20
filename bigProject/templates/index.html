@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Пельменная</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">
+</head>
+<body>
+<div class="grid-container">
+    {% for product in products %}
+    <div class="card">
+        <h3>{{ product.name }}</h3>
+        <img src="{{ product.image }}" class="cardImg">
+        <p>{{ product.description }}</p>
+        <small>{{ product.price }}</small>
+        <form action="product/{{product.id}}"/>
+            <input type="submit" value="Подробнее">
+        </form>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>

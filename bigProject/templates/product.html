@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{product.name}}</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">
+</head>
+<body>
+    <h1>{{product.name}}</h1>
+    <img src="{{product.image}}" class="cardPictures">
+    <p>{{product.description}}</p>
+<div class="grid-container">
+    {% for topping in toppings %}
+    <div class="card">
+        <h3>{{ topping.name }}</h3>
+        <small>{{ topping.price }}</small>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
