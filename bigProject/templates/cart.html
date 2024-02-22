@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">
+</head>
+<body>
+<h2>Корзина</h2>
+<table class="root-table">
+    <tr>
+        <th class="row-table">Название</th>
+        <th class="row-table">Изображение</th>
+        <th class="row-table">Описание</th>
+        <th class="row-table">Цена</th>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td class="row-table">{{ product.name }}</td>
+        <td class="row-table"><img src="{{ product.image }}" class="table-image"></td>
+        <td class="row-table">{{ product.description }}</td>
+        <td class="row-table">{{ product.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h2>Итог: {{summ}}</h2>
+</body>
+</html>
