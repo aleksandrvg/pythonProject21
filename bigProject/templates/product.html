@@ -18,8 +18,8 @@
     </div>
     {% endfor %}
 </div>
-<form action={% url 'add-cart' product_id=product.id %}>
-            <input type="submit" value="Добавить в корзину">
-        </form>
+    <form action={% url 'add-cart' product_id=product.id %}>
+        <input type="submit" value="Добавить в корзину">
+    </form>
 </body>
 </html>

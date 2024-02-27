@@ -25,5 +25,10 @@
     {% endfor %}
 </table>
 <h2>Итог: {{summ}}</h2>
+<form method="post" action="{% url 'email_sender' %}">
+    {% csrf_token %}
+    <input type="text" name="email">
+    <button type="submit">Оплатить</button>
+</form>
 </body>
 </html>
