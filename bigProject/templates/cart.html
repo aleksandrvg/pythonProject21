@@ -28,7 +28,7 @@
 <form method="post" action="{% url 'email_sender' %}">
     {% csrf_token %}
     <input type="text" name="email">
-    <button type="submit">Оплатить</button>
+    <button class="btn" type="submit">Оплатить</button>
 </form>
 </body>
 </html>
